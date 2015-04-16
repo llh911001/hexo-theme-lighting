@@ -1,0 +1,155 @@
+.widget-wrap
+  margin: block-margin 0
+
+.widget-title
+  @extend $block-caption
+
+.widget
+  color: color-sidebar-text
+  text-shadow: 0 1px #fff
+  background: color-widget-background
+  box-shadow: 0 -1px 4px color-widget-border inset
+  border: 1px solid color-widget-border
+  padding: 15px
+  border-radius: 3px
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  ul, ol, dl
+    ul, ol, dl
+      margin-left: 15px
+      list-style: disc
+
+.clearfix:after
+  content: ''
+  display: table
+  height: 0
+  clear: both
+
+#sidebar
+  position: fixed
+  left: -260px
+  top: 0
+  background: #eee
+  height: 100%
+  width: 260px
+  transition: all .2s linear
+  &.left-side
+    left: 0
+
+
+#site-info
+  text-align: center
+  position: relative
+  top: 160px
+
+#logo-wrap
+  transform: translateX(-20px)
+  transition: transform .5s ease-in-out
+  &.stagger
+    transform: translateX(0)
+
+#logo
+  background: url('images/logo.png') center
+  background-size: cover
+  border-radius: 50%
+  margin: auto;
+  width: 100px
+  height: 100px
+
+$nav-link
+  float: left
+  color: #333
+  opacity: 0.6
+  text-decoration: none
+  transition: all 0.2s
+  display: block
+  padding: 20px 15px
+  &:hover
+    opacity: 1
+
+.nav-icon
+  @extend $nav-link
+  font-family: font-icon
+  text-align: center
+  font-size: font-size
+  width: font-size
+  height: font-size
+  padding: 20px 15px
+  position: relative
+  cursor: pointer
+  color: #2E3434
+
+#social-wrap
+  margin: 0 auto
+  text-align: center
+  transform: translateX(-20px)
+  transition: transform .6s ease-in-out
+  &.stagger
+    transform: translateX(0)
+  .social-item
+    display: inline-block
+
+#nav-rss-link
+  font-size:24px
+  &:before
+    content: "\f09e"
+
+#nav-twitter-link
+  font-size: 24px
+  &:before
+    content: "\f099"
+  &:hover
+    color: #00aced
+
+#nav-github-link
+  font-size:24px
+  &:before
+    content: "\f09b"
+
+#nav-gplus-link
+  font-size: 24px
+  &:before
+    content: "\f0d5"
+  &:hover
+    color: #dd4b39
+
+.site-nav
+  left: 0
+  width: 100%
+  z-index: 999
+  text-align: center
+  position: relative
+  transform: translateX(-20px)
+  transition: transform .7s ease-in-out
+  &.stagger
+    transform: translateX(0)
+  &.nav-on
+    display: block
+  ul
+    list-style: none
+    padding: .5rem 0
+    margin: auto
+    li
+      padding: .5rem 0
+      display: inline-block
+      width: 70px
+      a
+        color: #999
+        text-decoration: none
+        transition: color 0.3s
+      &:hover
+        a
+          color: #3fb0e7
+
+body
+  transition: padding .2s linear
+  &.right-side
+    padding-left: 260px
+    overflow-x: hidden
+    @media mq-max-760
+      overflow-y: hidden
+  @media mq-max-1020
+    width: 100%

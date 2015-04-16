@@ -1,0 +1,43 @@
+<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+  <div id="site-info" class="inner">
+    <div id="logo-wrap" class="sidebar-item">
+      <div id="logo"></div>
+    </div>
+    <% if (theme.subtitle){ %>
+      <h2 id="subtitle-wrap">
+        <a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle %></a>
+      </h2>
+    <% } %>
+    <div id="social-wrap" class="clearfix sidebar-item">
+    <% if (theme.twitter) {%>
+      <div class="social-item">
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/<%- theme.twitter %>" title="Twitter" target="_blank"></a>
+      </div>
+    <% } %>
+    <% if (theme.github) {%>
+      <div class="social-item">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/<%- theme.github %>" title="Github" target="_blank"></a>
+      </div>
+    <% } %>
+    <% if (theme.google_plus) {%>
+      <div class="social-item">
+        <a id="nav-gplus-link" class="nav-icon" href="https://plus.google.com/<%- theme.google_plus %>" title="Google plus" target="_blank"></a>
+      </div>
+    <% } %>
+    <% if (theme.rss){ %>
+      <div class="social-item">
+        <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
+      </div>
+    <% } %>
+    </div>
+    <div class="site-nav sidebar-item">
+      <ul>
+      <% for (var i in theme.menu){ %>
+        <li>
+          <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        </li>
+      <% } %>
+      </ul>
+    </div>
+  </div>
+</aside>

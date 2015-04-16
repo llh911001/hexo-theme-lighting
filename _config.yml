@@ -1,0 +1,29 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+#rss: /atom.xml
+
+
+sitemap:
+    path: sitemap.xml
+
+# Content
+excerpt_link: Read more
+fancybox: true
+
+# Sidebar
+sidebar: left
+widgets:
+- tag
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.ico
+twitter: lilh42
+google_plus: u/0/108755916357635545032
+fb_admins:
+fb_app_id:
+github: llh911001
+email: llh911001@gmail.com

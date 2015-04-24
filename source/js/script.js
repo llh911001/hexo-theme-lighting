@@ -126,6 +126,14 @@
   $('#main-nav-toggle').on('click', function(){
     var $bar = $(this).find('.bar');
     $bar.toggleClass('active');
+
+    $outer = $('.outer')
+    width = $(window).width()
+    if (width < 760) {
+      if($bar.hasClass('active')) $outer.innerWidth(width)
+      else $outer[0].style.width = null
+    }
+
     $('body').toggleClass('right-side');
     $('#sidebar').toggleClass('left-side');
     $('#site-info').find('.sidebar-item').toggleClass('stagger');

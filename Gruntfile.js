@@ -28,6 +28,13 @@ module.exports = function(grunt){
         dest: 'source/fancybox/'
       }
     },
+    uglify: {
+      build: {
+        files: {
+          'script.min.js': ['source/js/script.js']
+        }
+      }
+    },
     _clean: {
       tmp: ['tmp'],
       fontawesome: ['source/css/fonts'],
